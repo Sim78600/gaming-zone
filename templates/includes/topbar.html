@@ -10,21 +10,21 @@
                         <img src=" {% static 'assets/images/logo.png' %} " alt="">
                     </a>
                     <!-- ***** Logo End ***** -->
-                    <!-- ***** Search Start ***** -->
+                    {% comment %} <!-- ***** Search Start ***** -->
                     <div class="search-input">
                       <form id="search" action="#">
                         <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
                         <i class="fa fa-search"></i>
                       </form>
                     </div>
-                    <!-- ***** Search End ***** -->
+                    <!-- ***** Search End ***** --> {% endcomment %}
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li><a href="{% url 'home' %}" class="active">Home</a></li>
                         <li><a href="{% url 'browse' %}">Games</a></li>
                         <li><a href="{% url 'categories' %}">Categories</a></li>
                         <li><a href="{% url 'streams' %}">Streams</a></li>
-                        <li><a href="">Login</a></li>
+                        <li><a href="{% url 'login' %}">Login</a></li>
                     </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>

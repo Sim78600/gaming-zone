@@ -39,15 +39,20 @@ def search(request):
 
 def categories(request):
     game_racing = game.objects.filter(game_category__icontains ='racing')
-    game_puzzle = game.objects.filter(game_category__icontains='puzzle')
-    game_shooting = game.objects.filter(game_category__icontains='shooting')
-    game_adventure = game.objects.filter(game_category__icontains='adventure')
-    game_parkour = game.objects.filter(game_category__icontains='parkour')
+    game_puzzle = game.objects.filter(game_category__icontains = 'puzzle')
+    game_shooting = game.objects.filter(game_category__icontains = 'shooting')
+    game_adventure = game.objects.filter(game_category__icontains = 'adventure')
+    game_parkour = game.objects.filter(game_category__icontains = 'parkour')
+    game_fighting = game.objects.filter(game_category__icontains = 'fighting')
     data = {
         'game_racing' : game_racing ,
         'game_puzzle' : game_puzzle ,
         'game_shooting' : game_shooting,
         'game_adventure' : game_adventure,
         'game_parkour' : game_parkour,
+        'game_fighting' : game_fighting,
     }
-    return render(request,'categories.html',data)   
+    return render(request,'categories.html',data)
+
+def login(request):
+    return render(request,'login.html')
