@@ -1,0 +1,50 @@
+{% extends 'includes/base.html' %} 
+{% block content %}
+
+
+        <!-- Login Start ***** -->
+        
+              <form action="{% url 'signup' %}" method="post">
+                {% csrf_token %}
+                <h1 id="litheader">Cyborg</h1>
+                <div class="inset">
+                    <p>
+                     <input type="text" name="username" id="email" placeholder="Your Name" />
+                    </p>
+                    <p>
+                     <input type="email" name="email" id="email" placeholder="Email address" />
+                    </p>
+                    <p>
+                     <input type="password" name="password" id="password" placeholder="Access code" />
+                    </p>
+                  <input class="loginLoginValue" type="hidden" name="service" value="login" />
+                </div>
+                <p class="p-container">
+                  <input type="submit" name="Login" id="go" value="Authorize" />
+                </p>
+                <div class="extra-login clearfix">
+                  <span>Or Login With</span>
+                </div>
+                <div class="clearfix"></div>
+                <ul class="social-list">
+                  {% comment %}
+                  <li>
+                    <a
+                      href="{% provider_login_url 'facebook' method='js_sdk' %}"
+                      class="facebook-bg"
+                      ><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="{% provider_login_url 'google' %}" class="google-bg"
+                      ><i class="fa fa-google google-i"></i><span>Google</span></a
+                    >
+                  </li>
+                  {% endcomment %}
+                </ul>
+              </form>
+        
+        <!-- ***** login End ***** -->
+
+
+{% endblock content %}

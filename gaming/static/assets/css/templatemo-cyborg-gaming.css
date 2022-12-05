@@ -128,10 +128,11 @@ body {
 }
 
 body .page-content {
-  margin-top: 110px;
+  margin-top: 100px;
   background-color: #27292a;
-  padding: 60px;
-  border-radius: 23px;
+  padding: 15px;
+  border-radius: 40px;
+
 }
 
 p {
@@ -945,6 +946,7 @@ footer p {
   padding: 30px 0px;
   color: #fff;
   font-weight: 300;
+  margin-top: 700px;
 }
 
 footer p a {
@@ -1639,6 +1641,9 @@ Responsive Style
 
 body {
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 767px) {

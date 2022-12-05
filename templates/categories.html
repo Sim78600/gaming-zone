@@ -1,250 +1,249 @@
-{% extends 'includes/base.html' %} 
-{% block content %}
+{% extends 'includes/base.html' %} {% block content %}
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="page-content">
-          
-          <!-- ***** Category of Racing Games ***** -->
-          <div class="most-popular">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="heading-section">
-                  <h4>Racing Games</h4>
-                </div>
-                <div class="row">
-                  {% for g in game_racing %}
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <a href="{% url 'game_detail' g.id %}">
-                        <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
-                      /></a>
-                      <h4>
-                        {{g.game_title}}<br /><span>{{g.game_server}}</span>
-                      </h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
-                        <li>
-                          <i class="fa fa-download"></i> {{g.game_category}}
-                        </li>
-                      </ul>
-                    </div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-content">
+
+        <!-- ***** Category of Racing Games ***** -->
+        <div class="most-popular">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="heading-section">
+                <h4>Racing Games</h4>
+              </div>
+              <div class="row">
+                {% for g in game_racing %}
+                <div class="col-lg-3 col-sm-6">
+                  <div class="item">
+                    <a href="{% url 'game_detail' g.id %}">
+                      <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
+                    /></a>
+                    <h4>
+                      {{g.game_title}}<br /><span>{{g.game_server}}</span>
+                    </h4>
+                    <ul>
+                      <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
+                      <li>
+                        <i class="fa fa-download"></i> {{g.game_category}}
+                      </li>
+                    </ul>
                   </div>
-                  {% endfor %}
-                  <div class="slick-btn">
-                    <div class="slick-prev slick-arrow-buton sab-4">
-                      <i class="fa fa-angle-left"></i>
-                      <i class="fa fa-angle-right"></i>
-                    </div>
+                </div>
+                {% endfor %}
+                <div class="slick-btn">
+                  <div class="slick-prev slick-arrow-buton sab-4">
+                    <i class="fa fa-angle-left"></i>
+                    <i class="fa fa-angle-right"></i>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- *Racing Category Ended* -->
-
-          <!-- Shooting Category Start ***** -->
-
-          <div class="most-popular">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="heading-section">
-                  <h4>Shooting Games</h4>
-                </div>
-                <div class="row">
-                  {% for g in game_shooting %}
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <a href="{% url 'game_detail' g.id %}">
-                        <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
-                      /></a>
-                      <h4>
-                        {{g.game_title}}<br /><span>{{g.game_server}}</span>
-                      </h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
-                        <li>
-                          <i class="fa fa-download"></i> {{g.game_category}}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  {% endfor %}
-                  <div class="slick-btn">
-                    <div class="slick-prev slick-arrow-buton sab-4">
-                      <i class="fa fa-angle-left"></i>
-                      <i class="fa fa-angle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--*Shooting Category Ended*-->
-
-          <!-- Puzzle Category Start ***** -->
-
-          <div class="most-popular">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="heading-section">
-                  <h4>Puzzle Games</h4>
-                </div>
-                <div class="row">
-                  {% for g in game_puzzle %}
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <a href="{% url 'game_detail' g.id %}">
-                        <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
-                      /></a>
-                      <h4>
-                        {{g.game_title}}<br /><span>{{g.game_server}}</span>
-                      </h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
-                        <li>
-                          <i class="fa fa-download"></i> {{g.game_category}}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  {% endfor %}
-                  <div class="slick-btn">
-                    <div class="slick-prev slick-arrow-buton sab-4">
-                      <i class="fa fa-angle-left"></i>
-                      <i class="fa fa-angle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--*Puzzle Category Ended*-->
-
-          <!-- Adventure Category Start ***** -->
-
-          <div class="most-popular">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="heading-section">
-                  <h4>Adventure Games</h4>
-                </div>
-                <div class="row">
-                  {% for g in game_adventure %}
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <a href="{% url 'game_detail' g.id %}">
-                        <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
-                      /></a>
-                      <h4>
-                        {{g.game_title}}<br /><span>{{g.game_server}}</span>
-                      </h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
-                        <li>
-                          <i class="fa fa-download"></i> {{g.game_category}}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  {% endfor %}
-                  <div class="slick-btn">
-                    <div class="slick-prev slick-arrow-buton sab-4">
-                      <i class="fa fa-angle-left"></i>
-                      <i class="fa fa-angle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--*Shooting Category Ended*-->
-
-          <!-- Parkour Category Start ***** -->
-
-          <div class="most-popular">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="heading-section">
-                  <h4>Pakrour Games</h4>
-                </div>
-                <div class="row">
-                  {% for g in game_parkour %}
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <a href="{% url 'game_detail' g.id %}">
-                        <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
-                      /></a>
-                      <h4>
-                        {{g.game_title}}<br /><span>{{g.game_server}}</span>
-                      </h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
-                        <li>
-                          <i class="fa fa-download"></i> {{g.game_category}}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  {% endfor %}
-                  <div class="slick-btn">
-                    <div class="slick-prev slick-arrow-buton sab-4">
-                      <i class="fa fa-angle-left"></i>
-                      <i class="fa fa-angle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--*Parkour Category Ended*-->
-
-          <!-- Fighting Category Start ***** -->
-
-          <div class="most-popular">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="heading-section">
-                  <h4>Fighting Games</h4>
-                </div>
-                <div class="row">
-                  {% for g in game_fighting %}
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <a href="{% url 'game_detail' g.id %}">
-                        <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
-                      /></a>
-                      <h4>
-                        {{g.game_title}}<br /><span>{{g.game_server}}</span>
-                      </h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
-                        <li>
-                          <i class="fa fa-download"></i> {{g.game_category}}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  {% endfor %}
-                  <div class="slick-btn">
-                    <div class="slick-prev slick-arrow-buton sab-4">
-                      <i class="fa fa-angle-left"></i>
-                      <i class="fa fa-angle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--*Fighting Category Ended*-->
         </div>
+        <!-- *Racing Category Ended* -->
+
+        <!-- Shooting Category Start ***** -->
+
+        <div class="most-popular">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="heading-section">
+                <h4>Shooting Games</h4>
+              </div>
+              <div class="row">
+                {% for g in game_shooting %}
+                <div class="col-lg-3 col-sm-6">
+                  <div class="item">
+                    <a href="{% url 'game_detail' g.id %}">
+                      <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
+                    /></a>
+                    <h4>
+                      {{g.game_title}}<br /><span>{{g.game_server}}</span>
+                    </h4>
+                    <ul>
+                      <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
+                      <li>
+                        <i class="fa fa-download"></i> {{g.game_category}}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                {% endfor %}
+                <div class="slick-btn">
+                  <div class="slick-prev slick-arrow-buton sab-4">
+                    <i class="fa fa-angle-left"></i>
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--*Shooting Category Ended*-->
+
+        <!-- Puzzle Category Start ***** -->
+
+        <div class="most-popular">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="heading-section">
+                <h4>Puzzle Games</h4>
+              </div>
+              <div class="row">
+                {% for g in game_puzzle %}
+                <div class="col-lg-3 col-sm-6">
+                  <div class="item">
+                    <a href="{% url 'game_detail' g.id %}">
+                      <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
+                    /></a>
+                    <h4>
+                      {{g.game_title}}<br /><span>{{g.game_server}}</span>
+                    </h4>
+                    <ul>
+                      <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
+                      <li>
+                        <i class="fa fa-download"></i> {{g.game_category}}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                {% endfor %}
+                <div class="slick-btn">
+                  <div class="slick-prev slick-arrow-buton sab-4">
+                    <i class="fa fa-angle-left"></i>
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--*Puzzle Category Ended*-->
+
+        <!-- Adventure Category Start ***** -->
+
+        <div class="most-popular">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="heading-section">
+                <h4>Adventure Games</h4>
+              </div>
+              <div class="row">
+                {% for g in game_adventure %}
+                <div class="col-lg-3 col-sm-6">
+                  <div class="item">
+                    <a href="{% url 'game_detail' g.id %}">
+                      <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
+                    /></a>
+                    <h4>
+                      {{g.game_title}}<br /><span>{{g.game_server}}</span>
+                    </h4>
+                    <ul>
+                      <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
+                      <li>
+                        <i class="fa fa-download"></i> {{g.game_category}}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                {% endfor %}
+                <div class="slick-btn">
+                  <div class="slick-prev slick-arrow-buton sab-4">
+                    <i class="fa fa-angle-left"></i>
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--*Shooting Category Ended*-->
+
+        <!-- Parkour Category Start ***** -->
+
+        <div class="most-popular">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="heading-section">
+                <h4>Pakrour Games</h4>
+              </div>
+              <div class="row">
+                {% for g in game_parkour %}
+                <div class="col-lg-3 col-sm-6">
+                  <div class="item">
+                    <a href="{% url 'game_detail' g.id %}">
+                      <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
+                    /></a>
+                    <h4>
+                      {{g.game_title}}<br /><span>{{g.game_server}}</span>
+                    </h4>
+                    <ul>
+                      <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
+                      <li>
+                        <i class="fa fa-download"></i> {{g.game_category}}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                {% endfor %}
+                <div class="slick-btn">
+                  <div class="slick-prev slick-arrow-buton sab-4">
+                    <i class="fa fa-angle-left"></i>
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--*Parkour Category Ended*-->
+
+        <!-- Fighting Category Start ***** -->
+
+        <div class="most-popular">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="heading-section">
+                <h4>Fighting Games</h4>
+              </div>
+              <div class="row">
+                {% for g in game_fighting %}
+                <div class="col-lg-3 col-sm-6">
+                  <div class="item">
+                    <a href="{% url 'game_detail' g.id %}">
+                      <img src="{{ g.game_logo.url }}" alt="" class="img-fluid"
+                    /></a>
+                    <h4>
+                      {{g.game_title}}<br /><span>{{g.game_server}}</span>
+                    </h4>
+                    <ul>
+                      <li><i class="fa fa-star"></i> {{g.game_rating}}</li>
+                      <li>
+                        <i class="fa fa-download"></i> {{g.game_category}}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                {% endfor %}
+                <div class="slick-btn">
+                  <div class="slick-prev slick-arrow-buton sab-4">
+                    <i class="fa fa-angle-left"></i>
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--*Fighting Category Ended*-->
       </div>
     </div>
   </div>
+</div>
 {% endblock content %}
